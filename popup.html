@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Character Counter</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <div class="logo-area">
+        <div class="logo-icon">123</div>
+        <div class="title-desc">
+          <h1>Quick Char Counter</h1>
+          <p>ドラッグ文字数を瞬時にカウント</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Settings -->
+    <main>
+      <!-- Real-time Text Area -->
+      <section class="counter-box">
+        <textarea id="quick-input" placeholder="ここに文章を入力して文字数をカウント..."></textarea>
+        <div class="counter-stats">
+          <div class="stat-item">
+            <span class="stat-val" id="val-total">0</span>
+            <span class="stat-lbl">全体文字数</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="val-no-space">0</span>
+            <span class="stat-lbl">空白・改行除く</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Settings List -->
+      <section class="settings-list">
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">拡張機能を有効にする</span>
+            <span class="setting-desc">ドラッグ時のツールチップ表示</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="setting-enabled" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">空白・改行を無視</span>
+            <span class="setting-desc">ツールチップでデフォルトで除外</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="setting-ignore-space">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <div class="setting-info">
+            <span class="setting-title">ダークテーマ</span>
+            <span class="setting-desc">ツールチップのカラーモード</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="setting-theme" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <span>ES作成や文章校正をスマートにサポート</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
